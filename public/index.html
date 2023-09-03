@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"/> -->
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Index</title>
+  </head>
+  <body>
+    <header>
+      <h1>Tasks</h1>
+      <button id="open-new-task-form">+</button>
+    </header>
+
+    <div id="new-task-form-container">
+      <form id="task-form-element">
+        <div id="new-task-form-inner">
+          <label for="name">Task Name</label>
+          <input
+            class="form-inputs"
+            type="text"
+            name="name"
+            placeholder="Task"
+            required
+          />
+          <label for="description">Task Description</label>
+          <textarea
+            class="form-inputs"
+            type="text"
+            name="description"
+            placeholder="Task Description"
+          ></textarea>
+          <label for="priority">Task Priority</label>
+          <input
+            class="form-inputs"
+            type="range"
+            name="priority"
+            placeholder="Priority"
+            min="0"
+            max="3"
+          />
+          <label for="due">Due Date</label>
+          <input
+            class="form-inputs"
+            type="date"
+            name="due"
+            placeholder="Due Date"
+          />
+        </div>
+        <div class="task-submit-container">
+          <div onclick="closeNewTaskModal()">Cancel</div>
+          <div id="submit-button-display-handle"></div>
+        </div>
+      </form>
+    </div>
+
+    <div id="tasks-container"></div>
+<!-- 
+    <div class="database-handle-zone">
+      <button id="checkdbButton">Check Database</button>
+      <button id="deletedbButton">Delete Database</button>
+    </div> -->
+
+    <div class="about">
+      <table>
+        <tbody>
+          <tr>
+            <td>"/"</td>
+            <td>GET</td>
+            <td>Serving this HTML page</td>
+          </tr>
+          <tr>
+            <td>"/fetch-tasks"</td>
+            <td>GET</td>
+            <td>Fetching the tasks from DB</td>
+          </tr>
+          <tr>
+            <td>"/create-task"</td>
+            <td>POST</td>
+            <td>Insert new task to the DB</td>
+          </tr>
+          <tr>
+            <td>"/update-task"</td>
+            <td>POST</td>
+            <td>Update the task according to ID</td>
+          </tr>
+          <tr>
+            <td>"/delete-task"</td>
+            <td>POST</td>
+            <td>Delete the task according to ID</td>
+          </tr>
+          <!-- <tr>
+            <td>"/check-db"</td>
+            <td>Check if the DB exists, if not, creates it</td>
+          </tr> -->
+          <!-- <tr>
+            <td>"/delete-db"</td>
+            <td>Drop the database</td>
+          </tr> -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="./client.js"></script>
+  </body>
+</html>

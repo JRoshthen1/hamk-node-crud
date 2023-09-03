@@ -1,0 +1,169 @@
+/* CSS Micro Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+img,
+iframe {
+  border: 0;
+}
+
+/* Variables */
+:root {
+  --bg: #0c1821;
+  --c2: #142234;
+  --c3: #283549;
+  --fg: #ffffff;
+  --rad20: 20px;
+}
+button {
+  background-color: var(--fg);
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--fg);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.task-card {
+  padding: 15px;
+  width: 100%;
+  margin: 10px;
+  max-width: 900px;
+  background-color: var(--c2);
+  border-radius: var(--rad20);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.task-card *{
+  margin: 0 15px
+}
+.task-card aside{
+  margin-left: auto;
+}
+#deleteButton, #updateButton {
+  background-color: var(--bg);
+  border: var(--fg) 1px solid;
+  color: var(--fg);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#open-new-task-form {
+  background-color: var(--c3);
+  border: var(--fg) 1px solid;
+  color: var(--fg);
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.task-submit-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.task-submit-container > * {
+  cursor: pointer;
+  border: var(--fg) 1px solid;
+  font-size: 12pt;
+  padding: 3px 6px;
+}
+.task-submit-container > button {
+  background-color: var(--fg);
+}
+#submit-button-display-handle > button {
+  background-color: var(--c3);
+  border: none;
+  font-size: 12pt;
+  color: var(--fg);
+}
+#new-task-form-container {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  background-color: var(--c3);
+  font-size: 12pt;
+  z-index: 10;
+  
+}
+#new-task-form-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+#new-task-form-inner > input[type="text"],
+input[type="date"],
+#new-task-form-inner > textarea {
+  padding: 7px 10px;
+  font-size: 12pt;
+  color: var(--fg);
+  background-color: var(--c2);
+  border: var(--fg) solid 1px;
+  margin: 10px 0px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#new-task-form-inner > input[type="range"] {
+  font-size: 12pt;
+  color: var(--fg);
+  background-color: var(--c2);
+  margin: 10px 0px;
+}
+.database-handle-zone > button{
+  margin-top: 50px;
+  background-color: var(--c3);
+  border: none;
+  font-size: 12pt;
+  color: var(--fg);
+  cursor: pointer;
+}
+table {
+  margin-top: 50px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  border: var(--fg) 1px solid;
+  padding: 6px 6px;
+}
